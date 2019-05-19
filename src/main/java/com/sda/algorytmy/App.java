@@ -37,9 +37,7 @@ public class App
             zapis.println(zakodowany);
             zapis.close();
 
-            for (int i=0;i<dlugoscStringa;i++){
-                System.out.println(listaWyjsciowa[i]);
-            }
+
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -80,8 +78,8 @@ public class App
         int a =0;
         for (int i = 0; i<slownik.tablica.length;i++){
         if (slownik.tablica[i]==znakWe){
-            a =((i+3)%85);
-
+            a=((i+3))%85;
+            return slownik.tablica[a];
         }
         } return slownik.tablica[a];
     }
@@ -90,7 +88,7 @@ public class App
         int a =0;
         for (int i = 0; i<slownik.tablica.length;i++){
             if (slownik.tablica[i]==znakWe){
-               a=((i+82)%85);
+                a=((i+82))%85;
 
             }
         }
